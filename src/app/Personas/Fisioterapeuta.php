@@ -1,11 +1,13 @@
 <?php
 
-namespace App;
+namespace App\Personas;
+
+use \App\Personas\Jugador;
 
 class Fisioterapeuta extends Empleado
 {
-    private $clienteVIP;
-    private $numColegiado;
+    private int $clienteVIP;
+    private Jugador $numColegiado;
 
     public function __construct(string $dni, string $nombre, string $apellidos ,string $direccion, string $cuentaCorriente,
                                 string $numSeguridadSocial, $clienteVIP, int $numColegiado)

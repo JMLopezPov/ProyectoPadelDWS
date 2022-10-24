@@ -1,7 +1,10 @@
 <?php
 
-namespace App;
+namespace App\Personas;
 
+use  \App\Enums\ManoHabil;
+use  \App\Enums\LadoPreferido;
+use App\Horarios\HorarioMensual;
 
 class Jugador extends Persona
 {
@@ -17,21 +20,12 @@ class Jugador extends Persona
     private bool $PartidasMixtas;
     private bool $esSocio;
 
-    public function __construct(string $dni, string $nombre, string $apellidos, int $nivelJuego, $manoHabil, $ladoPreferido,
-                                $horarioMensualPreferido, int $indiceDeIrresponsabilidad, int $numFederacion, $fisioAsociado,
-                                $entrenadorPersonal, $PartidasMixtas, $esSocio)
+    public function __construct(string $dni, string $nombre, string $apellidos, int $nivelJuego, ManoHabil $manoHabil,LadoPreferido $ladoPreferido,)
     {
         parent::__construct($dni,$nombre,$apellidos);
         $this->nivelJuego = $nivelJuego;
         $this->manoHabil = $manoHabil;
         $this->ladoPreferido = $ladoPreferido;
-        $this->horarioMensualPreferido = $horarioMensualPreferido;
-        $this->indiceDeIrresponsabilidad = $indiceDeIrresponsabilidad;
-        $this->numFederacion = $numFederacion;
-        $this->fisioAsociado = $fisioAsociado;
-        $this->entrenadorPersonal = $entrenadorPersonal;
-        $this->PartidasMixtas = $PartidasMixtas;
-        $this->esSocio = $esSocio;
         $this->renovacionAutomaticaHorario = true;
 
     }

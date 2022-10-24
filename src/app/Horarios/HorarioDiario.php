@@ -1,6 +1,8 @@
 <?php
 
-namespace App;
+namespace App\Horarios;
+
+use \App\Horarios\Intervalo;
 
 class HorarioDiario extends Intervalo
 {

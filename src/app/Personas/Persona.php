@@ -1,6 +1,8 @@
 <?php
 
-namespace App;
+namespace App\Personas;
+
+
 
 class Persona
 {

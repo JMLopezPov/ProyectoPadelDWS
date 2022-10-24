@@ -1,20 +1,20 @@
 <?php
 
-namespace App;
+namespace App\Horarios;
 
-class Intervalo extends HorarioDiario
+use App\Personas\Jugador;
+
+class Intervalo
 {
     private float $horaInicio;
     private float $horaFin;
     private bool $disponibilidad;
     private Jugador $jugadorReservado;
 
-    public function __construct($horaInicio, $horaFin,bool $disponibilidad, $jugadorReservado)
+    public function __construct(float $horaInicio, float $horaFin)
     {
         $this->horaInicio = $horaInicio;
         $this->horaFin = $horaFin;
-        $this->disponibilidad = $disponibilidad;
-        $this->jugadorReservado = $jugadorReservado;
     }
 
     public function reservarHorario(Jugador $jugador): ?Intervalo{

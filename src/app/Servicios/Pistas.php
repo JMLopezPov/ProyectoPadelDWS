@@ -1,19 +1,21 @@
 <?php
 
-namespace App;
+namespace App\Servicios;
+
+use App\Enums\TipoPista;
 
 class Pistas
 {
-    private $idPista;
-    private $precio;
-    private $luz;
-    private $precioLuz;
-    private $tipoPista;
-    private $cubierta;
-    private $disponibleParaUsar;
-    private $reservaPistaMensuales;
+    private int $idPista;
+    private float $precio;
+    private bool $luz;
+    private float $precioLuz;
+    private TipoPista $tipoPista;
+    private bool $cubierta;
+    private bool $disponibleParaUsar;
+    private array $reservaPistaMensuales;
 
-    public function __construct(int $idPista,float $precio,bool $luz,bool $precioLuz, $tipoPista,bool $cubierta,
+    public function __construct(int $idPista,float $precio,bool $luz,float $precioLuz, $tipoPista,bool $cubierta,
                                 bool $disponibleParaUsar,array $reservaPistaMensuales)
     {
         $this->idPista = $idPista;

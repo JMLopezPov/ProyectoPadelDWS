@@ -1,6 +1,8 @@
 <?php
 
-namespace App;
+namespace App\Personas;
+
+use \App\Horarios\HorarioMensual;
 
 class Empleado extends Persona
 {
